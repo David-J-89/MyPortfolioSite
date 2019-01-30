@@ -1,10 +1,16 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import "reset";
 
-body {
-  line-height: 1;
+
+html,body{
+    font-family: 'Barlow', sans-serif !important;
 }
-.container-background{
+
+body {
+    line-height: 1;
+}
+
+.container-background {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -26,7 +32,7 @@ body {
     //background: red;
 }
 
-.center-site{
+.center-site {
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -41,9 +47,110 @@ body {
 .container-site {
     display: grid;
     height: 80vh;
-    width: 1080px;
+    width: 1300px;
     background: white;
     border-radius: 8px;
-    
-}
+    grid-template-columns: 80px 200px 1fr;
+    overflow: hidden;
 
+    .navigation {
+        background: #0e268e; /* Old browsers */
+        background: -moz-linear-gradient(top, #0e268e 0%, #9267d3 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #0e268e 0%,#9267d3 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #0e268e 0%,#9267d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        ul {
+            li {
+                display: block;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .user-profile {
+        background: #002497; /* Old browsers */
+        background: -moz-linear-gradient(top, #002497 0%, #a176ec 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #002497 0%,#a176ec 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #002497 0%,#a176ec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        .name {
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 400;
+            text-align: center;
+            padding: 32px 0;
+            letter-spacing: 2px;
+        }
+
+        .border-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //padding: 25px;
+            border: ridge 2px #50C878;
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .user-img {
+            background: url("../img/profile2.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 119px;
+            height: 119px;
+            border-radius: 50%;
+        }
+
+        .user-position {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: white;
+            margin: 20px 0 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: white;
+            margin: 20px 0 20px;
+        }
+
+        .user-skills {
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+
+            .skill {
+                background: #6761c7;
+                color: white;
+                font-weight: 400;
+                font-size: .8rem;
+                border-radius: 4px;
+                padding: 7px 18px;
+                display: inline-block;
+                margin-bottom: 10px;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: #313cb2;
+                    background: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .content-area {
+        background: #f8f7fc;
+    }
+}
